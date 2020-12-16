@@ -1,0 +1,97 @@
+/* ------ SETUP ------ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- BODY & GRID SETUP----- */
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+header,
+main,
+footer,
+nav {
+  background: rgba(240, 128, 128, 0.363);
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  justify-content: center;
+}
+main {
+  grid-area: main;
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+}
+footer {
+  grid-area: footer;
+}
+nav {
+  grid-area: nav;
+  display: grid;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  body {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header nav"
+      "main main"
+      "footer footer";
+    font-size: 120%;
+  }
+}
+
+/* ----- LOGO ----- */
+.logo {
+  height: 150px;
+  width: auto;
+}
+
+/* ----- NAVIGATION BAR ----- */
+.main-nav {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.main-nav li {
+  display: grid;
+  justify-content: space-between;
+  display: inline-block;
+  margin: 10px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 80%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
