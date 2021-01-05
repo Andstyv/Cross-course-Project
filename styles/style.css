@@ -13,6 +13,15 @@ a {
   text-decoration: none;
 }
 
+/* ----- STYLE TILE FROM COURSE ASSIGNMENT 1 ----- */
+.style-tile {
+  color: #fcfff5;
+  color: #d1dbbd;
+  color: #91aa9d;
+  color: #3e606f;
+  color: #193441;
+}
+
 /* ----- BODY & GRID SETUP----- */
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -21,7 +30,6 @@ body {
   background-position: center;
   min-height: 100vh;
   display: grid;
-  grid-gap: 1em;
   grid-template-columns: auto;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
@@ -33,11 +41,10 @@ body {
 
 /* ----- CODE TO HELP SEE THE GRIDS ----- 
 header,
-main,
 footer,
 nav {
   background: rgba(240, 128, 128, 0.363);
-}*/
+} */
 
 /* ----- OVERALL SETTINGS ----- */
 header {
@@ -47,6 +54,7 @@ header {
 }
 main {
   grid-area: main;
+  border-top: 1px solid rgb(70, 70, 70);
 }
 main h2 {
   display: grid;
@@ -64,6 +72,59 @@ nav {
   align-content: flex-end;
 }
 
+/* ----- SETTINGS SPECIFIC FOR PRODUCTS PAGE ----- */
+.products-main {
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+
+  grid-template-areas:
+    "home-section-one home-section-two home-section-three"
+    "home-section-four home-section-four home-section-four"
+    "home-section-five home-section-five home-section-five"
+    "home-section-six home-section-six home-section-six"
+    "home-section-seven home-section-seven home-section-seven";
+  grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+}
+.home-section:nth-child(1) {
+  grid-area: home-section-one;
+  background: fuchsia;
+}
+.home-section:nth-child(2) {
+  grid-area: home-section-two;
+  background: fuchsia;
+  text-align: center;
+}
+.home-section:nth-child(3) {
+  grid-area: home-section-three;
+  background: fuchsia;
+  text-align: center;
+}
+.home-section:nth-child(4) {
+  grid-area: home-section-four;
+  display: flex;
+  gap: 10px;
+  align-content: center;
+}
+.home-section:nth-child(4) img {
+  grid-area: home-section-four;
+  max-width: 150px;
+  max-height: 150px;
+}
+.home-section:nth-child(5) {
+  grid-area: home-section-five;
+  background: fuchsia;
+}
+.home-section:nth-child(6) {
+  grid-area: home-section-six;
+  background: fuchsia;
+}
+.home-section:nth-child(7) {
+  grid-area: home-section-seven;
+  background: fuchsia;
+}
+
 /* ----- MEDIA QUERY FOR LARGE SCREENS ----- */
 @media (min-width: 900px) {
   body {
@@ -75,6 +136,22 @@ nav {
       "footer footer";
     font-size: 120%;
   }
+  .products-main {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+
+    grid-template-areas:
+      "home-section-one home-section-two home-section-two  home-section-three"
+      "home-section-four home-section-five home-section-six home-section-seven";
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .home-section:nth-child(4) {
+    grid-area: home-section-four;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* ----- LOGO ----- */
@@ -84,16 +161,24 @@ nav {
 }
 
 /* ----- NAVIGATION BAR ----- */
+
+.main-nav li .hello-valg {
+  text-decoration: underline;
+  color: fuchsia;
+  margin-bottom: 100px;
+}
+
 .main-nav li {
   display: inline-block;
   padding: 0px 20px;
   word-wrap: normal;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  text-decoration: underline;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-  padding: 8px 0;
+  padding: 1px 0;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -104,7 +189,20 @@ nav {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 2px solid #fcfff5;
+}
+.quote-box {
+  text-align: center;
+  padding: 0% 10%;
+  font-style: italic;
+  margin-top: 25px;
+}
+
+.explore-btn {
+  display: block;
+  color: burlywood;
+  text-align: center;
+  margin-top: 30px;
 }
 
 footer {
@@ -114,3 +212,46 @@ footer {
   text-align: center;
   font-size: 60%;
 }
+
+/* Dropdown Button 
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  text-transform: uppercase;
+}
+ The container <div> - needed to position the dropdown content 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover 
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+*/
