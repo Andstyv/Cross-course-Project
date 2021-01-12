@@ -47,6 +47,7 @@ body {
   background-position: center;
   min-height: 100vh;
 }
+
 /* ----- OVERALL SETTINGS ----- */
 header {
   grid-area: header;
@@ -276,25 +277,13 @@ nav {
   margin-bottom: 5px;
 }
 
-/* --- OLD LINK DESIGN --- 
-.main-nav li a:link,
-.main-nav li a:visited {
-  padding: 1px 0;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 80%;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s;
-} */
-
 .main-nav li a:hover,
 .main-nav li a:active,
 .prod-menu:hover {
   border-bottom: 2px solid #fcfff5;
 }
 .main-nav :nth-child(1) {
-  margin-bottom: 0; /* ----- FIKS MARGIN BOTTOM FOR NAV --- */
+  margin-bottom: 0;
 }
 .main-nav :nth-child(2) {
   flex-grow: 2;
@@ -326,7 +315,7 @@ nav {
   text-shadow: black;
 }
 
-/* ----- NAVIGATION AND SEARCH SETTINGS ----- */
+/* ----- SEARCH BAR SETTINGS SETTINGS ----- */
 .search {
   display: flex;
   width: 100%;
@@ -372,7 +361,6 @@ nav {
 }
 
 /* ----- DROPDOWN MENU ----- */
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -415,13 +403,11 @@ nav {
   display: block;
 }
 
-.product1-lrg {
-  margin-top: 20px;
-}
-.jacketimg_blue-lrg {
-  max-width: 400px;
+.prod-menu p {
+  cursor: pointer;
 }
 
+/* ----- OVERALL PRODUCT PAGE CODE ----- */
 .prod-explore {
   background: #d1dbbd;
   border-radius: 6px;
@@ -440,8 +426,13 @@ nav {
   margin-top: 20px;
 }
 
-.prod-menu p {
-  cursor: pointer;
+/* ----- SPECIFIC PRODUCT PAGE CODE ----- */
+.product1-lrg {
+  margin-top: 20px;
+}
+
+.jacketimg_blue-lrg {
+  max-width: 400px;
 }
 
 .back-btn {
