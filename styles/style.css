@@ -25,11 +25,25 @@ a {
 }
 
 /* ----- BODY & GRID SETUP----- */
-body {
+.body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
     url(img/hero.jpg);
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+.about-bdy {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+    url(img/about_img.jpg);
+  background-size: cover;
   min-height: 100vh;
   display: grid;
   grid-template-columns: auto;
@@ -52,7 +66,7 @@ body {
 header {
   grid-area: header;
   display: grid;
-  justify-content: center;
+  justify-content: flex-start;
 }
 main {
   grid-area: main;
@@ -185,13 +199,25 @@ nav {
   .prodlrg-1 img {
     max-width: 95vw;
   }
+  header {
+    justify-content: center;
+  }
 }
 
 /* ----- MEDIA QUERY FOR LARGE SCREENS ----- */
 @media (min-width: 900px) {
-  body {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr auto;
+  .body {
+    grid-template-columns: auto;
+    grid-template-rows: 130px auto 100px;
+    grid-template-areas:
+      "header nav"
+      "main main"
+      "footer footer";
+    font-size: 120%;
+  }
+  .about-bdy {
+    grid-template-columns: auto;
+    grid-template-rows: 130px auto 100px;
     grid-template-areas:
       "header nav"
       "main main"
@@ -201,12 +227,12 @@ nav {
   .products-main {
     display: grid;
     grid-gap: 10px;
-    padding: 10px;
+    padding: 50px;
 
     grid-template-areas:
       "hamb-menu search-bar search-bar  shopcart"
       "product1 product2 product3 product4";
-    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-rows: 0px auto 0px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
@@ -247,11 +273,23 @@ nav {
     gap: 5%;
     margin: 50px 0 0 5%;
   }
+  .about-title {
+    margin-top: 300px;
+    margin-left: 50px;
+  }
+
+  .about-txt1,
+  .about-txt2 {
+    display: flex;
+    max-width: 600px;
+    margin: 10px 0 0 50px;
+    background-color: #d1dbbd23;
+  }
 }
 
 /* ----- LOGO ----- */
 .logo {
-  height: 120px;
+  height: 150px;
   width: auto;
   margin-left: 15px;
 }
@@ -487,4 +525,16 @@ nav {
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.about-title,
+.about-txt1,
+.about-txt2 {
+  display: flex;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.about-title {
+  margin-top: 80px;
 }
