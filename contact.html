@@ -10,6 +10,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAINY DAYS &mdash; HOME</title>
+    <script
+      src="https://kit.fontawesome.com/35dab5c0f5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -21,7 +25,26 @@
       <div class="row">
         <ul class="main-nav">
           <li>
-            <a href="products.html">Products</a>
+            <section class="prod-menu">
+              <button type="submit" class="iconButton"></button>
+              <label for="prod-check" class="nav-prod"><p>Products</p></label>
+              <input type="checkbox" id="prod-check" />
+              <div class="dropdown-content">
+                <a href="products.html">Women</a>
+                <a href="products.html">Men</a>
+                <a href="products.html">Kids</a>
+              </div>
+            </section>
+          </li>
+          <li>
+            <section class="search-bar-lrg">
+              <div class="search">
+                <input type="text" class="searchWord" placeholder="SEARCH" />
+                <button type="submit" class="searchButton">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </section>
           </li>
           <li>
             <a href="about.html">About us</a>
@@ -32,7 +55,44 @@
         </ul>
       </div>
     </nav>
-    <main></main>
+    <main>
+      <div class="contact-container">
+        <a href="products.html">Go back</a>
+        <div class="soc-contact">
+          <h3 class="contact-us-txt">Contact us</h3>
+          <div class="soc-contact-icons">
+            <i class="fab fa-snapchat-ghost"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+
+        <input
+          type="text"
+          name="contactname"
+          class="contactname"
+          placeholder="Name"
+        />
+        <input
+          type="email"
+          name="contactmail"
+          class="contactmail"
+          placeholder="E-mail"
+        />
+        <input
+          type="tel"
+          name="contacttel"
+          class="contacttel"
+          placeholder="Telephone"
+        />
+        <textarea
+          id="contactmsg"
+          name="contactmsg"
+          placeholder="What can we help you with?"
+        ></textarea>
+        <input type="submit" class="contact-submit" value="Send" />
+      </div>
+    </main>
     <footer><h3>FOOTER FOOTER FOOTER</h3></footer>
   </body>
 </html>
