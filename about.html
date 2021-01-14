@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAINY DAYS &mdash; HOME</title>
   </head>
-  <body>
+  <body class="about-bdy">
     <header>
       <a href="index.html">
         <img src="img/LOGO@2x.png" alt="Rainy Days logo" class="logo"
@@ -21,10 +21,29 @@
       <div class="row">
         <ul class="main-nav">
           <li>
-            <a href="products.html">Products</a>
+            <section class="prod-menu">
+              <button type="submit" class="iconButton"></button>
+              <label for="prod-check" class="nav-prod"><p>Products</p></label>
+              <input type="checkbox" id="prod-check" />
+              <div class="dropdown-content">
+                <a href="products.html">Women</a>
+                <a href="products.html">Men</a>
+                <a href="products.html">Kids</a>
+              </div>
+            </section>
           </li>
           <li>
-            <a href="about.html" class="hello-valg">About us</a>
+            <section class="search-bar-lrg">
+              <div class="search">
+                <input type="text" class="searchWord" placeholder="SEARCH" />
+                <button type="submit" class="searchButton">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </section>
+          </li>
+          <li>
+            <a href="about.html">About us</a>
           </li>
           <li>
             <a href="contact.html">Contact</a>
@@ -32,7 +51,25 @@
         </ul>
       </div>
     </nav>
-    <main></main>
+    <main>
+      <h1 class="about-title">About us</h1>
+
+      <p class="about-txt1">
+        Mauris accumsan imperdiet est vitae elementum. Vestibulum dapibus dolor
+        risus, a consectetur felis dapibus id. Aliquam mollis facilisis
+        eleifend. Maecenas dictum velit viverra tristique dictum. Aenean in
+        sapien eget nulla facilisis fermentum ut ac ante. Donec aliquet lorem
+        est, id porttitor orci pulvinar at. Proin sagittis malesuada varius.
+      </p>
+      <p class="about-txt2">
+        Praesent lectus nisl, euismod nec velit vel, sagittis cursus arcu. Donec
+        quis iaculis massa. Integer ac tempor enim, quis laoreet velit.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Aenean pellentesque libero a velit fermentum
+        sodales. Praesent vulputate lorem ut risus feugiat, nec aliquet metus
+        faucibus.
+      </p>
+    </main>
     <footer><h3>FOOTER FOOTER FOOTER</h3></footer>
   </body>
 </html>
