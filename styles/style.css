@@ -78,7 +78,6 @@ header {
 }
 main {
   grid-area: main;
-  /* border-top: 1px solid rgb(70, 70, 70); */
 }
 main h2 {
   display: grid;
@@ -167,7 +166,30 @@ nav {
   grid-area: product4;
 }
 
-/* ----- SETTINGS SPECIFIC FOR PRODUCT-SPECIFIC PAGE ----- */
+.prod-explore {
+  background: #d1dbbd;
+  border-radius: 6px;
+  width: 50px;
+  text-align: center;
+  color: black;
+  font-size: 90%;
+}
+
+.prod-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.prod-text a {
+  margin-top: 20px;
+}
+
+.prod-text p:nth-child(2) {
+  margin-top: 10px;
+}
+
+/* ----- SETTINGS FOR PRODUCT-SPECIFIC PAGES ----- */
 .products-prod {
   display: grid;
   padding: 10px;
@@ -192,16 +214,54 @@ nav {
   grid-area: product1-lrg;
 }
 
+.product1-lrg {
+  margin-top: 20px;
+}
+
+.jacketimg_blue-lrg,
+.jacketimg_green-lrg,
+.jacketimg_red-lrg,
+.jacketimg_yellow-lrg {
+  max-width: 400px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 65px;
+  border-bottom: 1px solid white;
+}
+
 /* ----- MEDIA QUERY FOR SMALL SCREENS ----- */
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   .logo {
     height: 100px;
   }
-
   nav {
     display: none;
   }
-
+  main {
+    display: flex;
+    align-items: center;
+  }
+  .index-main {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .main-cart,
+  .main-check {
+    display: block;
+  }
+  .main-about {
+    flex-direction: column;
+  }
+  .contact-main {
+    justify-content: center;
+  }
+  .contact-container {
+    width: 75vw;
+  }
   footer i {
     font-size: 300%;
     padding: 10px 0;
@@ -224,12 +284,10 @@ nav {
   .prodlrg-2 p:nth-child(3) {
     margin-top: 10px;
   }
-
   .price-size p {
     font-size: 150%;
     font-weight: inherit;
   }
-
   .price-size {
     display: flex;
     align-items: center;
@@ -242,7 +300,6 @@ nav {
   .size-select select {
     background: #fcfff5;
   }
-
   .addcart-btn {
     display: flex;
     justify-content: center;
@@ -258,6 +315,10 @@ nav {
     border-radius: 5px;
     background: #fcfff5;
   }
+  .prod-addcart:hover,
+  .submit-checkout:hover {
+    cursor: pointer;
+  }
 
   header {
     justify-content: center;
@@ -271,12 +332,11 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+    text-align: center;
   }
-
   .cart-view-success h2 {
     margin-bottom: 20px;
   }
-
   .cart-view-success a {
     margin-top: 30px;
   }
@@ -311,6 +371,7 @@ nav {
     font-size: 110%;
     border-radius: 5px;
   }
+
   .shipping h3:nth-child(2) {
     margin-right: 9px;
   }
@@ -328,7 +389,7 @@ nav {
 }
 
 /* ----- MEDIA QUERY FOR LARGE SCREENS ----- */
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .body {
     grid-template-columns: auto;
     grid-template-rows: 130px auto 100px;
@@ -338,10 +399,23 @@ nav {
       "footer footer";
     font-size: 120%;
   }
+
   main {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  footer a {
+    font-size: 2em;
+  }
+  .index-main {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+  }
+  .main-about {
+    flex-direction: column;
+    align-items: baseline;
   }
   .navsmall-cart {
     display: none;
@@ -361,6 +435,7 @@ nav {
     display: grid;
     grid-gap: 10px;
     padding: 100px 50px 50px 50px;
+    align-items: flex-start;
 
     grid-template-areas:
       "hamb-menu search-bar search-bar  shopcart"
@@ -410,15 +485,18 @@ nav {
   }
   .about-title {
     margin-top: 300px;
-    margin-left: 50px;
+    margin-left: 10%;
   }
 
   .about-txt1,
   .about-txt2 {
     display: flex;
     max-width: 600px;
-    margin: 10px 0 0 50px;
+    margin: 10px 0 0 10%;
     background-color: #d1dbbd23;
+  }
+  .about-back {
+    display: none;
   }
   .cart-view {
     display: flex;
@@ -426,13 +504,13 @@ nav {
     justify-content: space-around;
     padding: 50px;
     background: #3e606fa1;
-    font-size: 150%;
+    font-size: 125%;
   }
   .cart-view-success {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
     background: #3e606fa1;
     font-size: 150%;
   }
@@ -489,6 +567,9 @@ nav {
     border-radius: 10px;
     width: 150px;
   }
+  .check-btn input:hover {
+    cursor: pointer;
+  }
   .check-btn a {
     display: flex;
     justify-content: center;
@@ -508,7 +589,16 @@ nav {
     border-bottom: 1px solid white;
   }
 }
-
+/* ---- MEDIA QUERY FOR VERY LARGE SCREENS ----- */
+@media (min-width: 2000px) {
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    font-size: 200%;
+  }
+}
 /* ----- LOGO ----- */
 .logo {
   max-height: 150px;
@@ -516,7 +606,7 @@ nav {
   margin-left: 15px;
 }
 
-/* ----- NAVIGATION BAR ----- */
+/* ----- NAVIGATION SETTINGS ----- */
 .main-nav {
   display: flex;
   align-items: flex-end;
@@ -553,7 +643,10 @@ nav {
   text-align: center;
   padding: 0% 10%;
   font-style: italic;
-  margin-top: 100px;
+  margin-top: 50px;
+}
+.quote-box p {
+  color: #193441;
 }
 
 .explore-btn {
@@ -564,14 +657,19 @@ nav {
   font-weight: 500;
   letter-spacing: 2px;
   font-size: 140%;
-  text-shadow: black;
+  background: #fcfff5;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-/* ----- SEARCH BAR SETTINGS SETTINGS ----- */
+/* ----- SEARCH BAR SETTINGS ----- */
 .search {
   display: flex;
   width: 100%;
   position: relative;
+}
+.search-bar {
+  flex-grow: 2;
 }
 
 .searchWord {
@@ -665,47 +763,6 @@ nav {
   cursor: pointer;
 }
 
-/* ----- OVERALL PRODUCT PAGE CODE ----- */
-.prod-explore {
-  background: #d1dbbd;
-  border-radius: 6px;
-  width: 50px;
-  text-align: center;
-  color: black;
-  font-size: 90%;
-}
-
-.prod-text {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-}
-
-.prod-text a {
-  margin-top: 20px;
-}
-
-.prod-text p:nth-child(2) {
-  margin-top: 10px;
-}
-
-/* ----- SPECIFIC PRODUCT PAGE CODE ----- */
-.product1-lrg {
-  margin-top: 20px;
-}
-
-.jacketimg_blue-lrg {
-  max-width: 400px;
-}
-
-.back-btn {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-  width: 65px;
-  border-bottom: 1px solid white;
-}
-
 /* ----- CONTACT PAGE SPECIFIC CODE ----- */
 
 .contact-container {
@@ -755,6 +812,10 @@ nav {
 .contact-submit {
   height: 24px;
   width: 10em;
+  border-bottom: none;
+}
+.contact-submit:hover {
+  cursor: pointer;
 }
 
 .contact-us-txt {
@@ -763,6 +824,7 @@ nav {
   letter-spacing: 1px;
 }
 
+/* ----- ABOUT PAGE SPECIFICS ----- */
 .about-title,
 .about-txt1,
 .about-txt2 {
@@ -775,6 +837,7 @@ nav {
   margin-top: 80px;
 }
 
+/* ----- CART PAGE SPECIFICS ----- */
 .cart-img {
   height: auto;
   width: 100px;
@@ -793,7 +856,7 @@ nav {
   display: flex;
   margin: auto 20px;
   justify-content: space-between;
-  max-width: 400px;
+  max-width: 100%;
 }
 .shipping {
   border-bottom: 0.5px solid #fcfff5;
@@ -826,14 +889,10 @@ nav {
   margin: 0px 20px 10px 20px;
   border-bottom: 1px solid #fcfff5;
   text-transform: uppercase;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 .cart-pmt {
   display: flex;
   flex-direction: column;
-}
-
-.search-bar {
-  flex-grow: 2;
 }
