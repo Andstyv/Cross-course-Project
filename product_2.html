@@ -25,7 +25,7 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
   </head>
   <body class="products-body">
     <header>
@@ -88,6 +88,7 @@
         </div>
       </section>
       <section class="shopcart">
+        <h5 class="numberOfItems"></h5>
         <a href="cart.html"
           ><button type="submit" class="iconButton2">
             <i class="fas fa-shopping-cart"></i></button
@@ -105,15 +106,15 @@
             <div class="size-select">
               <select name="sizes" id="sizes">
                 <option value="" selected disabled hidden>CHOOSE SIZE</option>
-                <option value="small">SMALL</option>
-                <option value="medium">MEDIUM</option>
-                <option value="large">LARGE</option>
-                <option value="x-large" disabled>X-LARGE (Out of Stock)</option>
+                <option value="4" label="Small">SMALL</option>
+                <option value="5" label="Medium">MEDIUM</option>
+                <option value="6" label="Large">LARGE</option>
+                <option value="" label="X-Large" disabled>X-LARGE (Out of Stock)</option>
               </select>
             </div>
           </div>
           <div class="addcart-btn">
-            <a href="cart.html"> <input class="prod-addcart" type="submit" value="ADD TO CART" /></a>
+            <a href="#"> <input class="prod-addcart" data-product="2" type="submit" value="ADD TO CART" /></a>
           </div>
         </div>
       </section>

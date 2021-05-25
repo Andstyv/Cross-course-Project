@@ -25,7 +25,8 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/cart.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
   </head>
   <body class="products-body">
     <header>
@@ -104,10 +105,11 @@
             <div class="product-spec">
               <h3>Rain Jacket</h3>
               <h3>Color: BLUE</h3>
-              <h3>Size: MEDIUM</h3>
+              <h3>Size: x</h3>
             </div>
           </div>
         </div>
+        <h3 class="size"></h3>
         <div class="cart-pmt">
           <h2 class="order-total">Order total</h2>
           <div class="price">
@@ -120,7 +122,7 @@
           </div>
           <div class="subtotal">
             <h3>Sub total</h3>
-            <h3>1 399,-</h3>
+            <h3 id="subsum">1 399</h3>
           </div>
 
           <div class="check-btn">

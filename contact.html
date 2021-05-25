@@ -25,7 +25,6 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <script src="js/script.js"></script>
   </head>
   <body class="body">
     <header>
@@ -76,12 +75,17 @@
             <i class="fab fa-instagram"></i>
           </div>
         </div>
-
-        <input type="text" name="contactname" class="contactname" placeholder="Name" />
-        <input type="email" name="contactmail" class="contactmail" placeholder="E-mail" />
-        <input type="tel" name="contacttel" class="contacttel" placeholder="Telephone" />
-        <textarea id="contactmsg" name="contactmsg" placeholder="What can we help you with?"></textarea>
-        <input type="submit" class="contact-submit" value="Send" />
+        <form id="contact">
+          <div class="form-error" id="name-error">Please enter a name</div>
+          <input type="text" name="contactname" class="contactname" placeholder="Name" />
+          <div class="form-error" id="email-error">Please enter a valid email</div>
+          <input type="email" name="contactmail" class="contactmail" placeholder="E-mail" />
+          <div class="form-error" id="tlf-error">Please enter a valid phone number</div>
+          <input type="tel" name="contacttel" class="contacttel" placeholder="Telephone" />
+          <div class="form-error" id="txt-error">Please enter a valid text</div>
+          <textarea id="contactmsg" name="contactmsg" placeholder="What can we help you with?"></textarea>
+          <input type="submit" class="contact-submit" value="Send" />
+        </form>
       </div>
     </main>
     <footer>
@@ -91,5 +95,6 @@
       <a href="contact.html"> <i class="fab fa-instagram"></i></a>
       <a href="contact.html"> <i class="far fa-envelope"></i></a>
     </footer>
+    <script src="js/error.js"></script>
   </body>
 </html>
