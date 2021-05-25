@@ -25,6 +25,7 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
+    <script src="js/script.js" type="module"></script>
   </head>
   <body class="products-body">
     <header>
@@ -35,8 +36,8 @@
         <ul class="main-nav">
           <li>
             <section class="prod-menu">
-              <button type="submit" class="iconButton"></button>
-              <label for="prod-check" class="nav-prod"><p>Products</p></label>
+              <!--<button type="submit" class="iconButton"></button> -->
+              <label for="prod-check" class="nav-prod">Products</label>
               <input type="checkbox" id="prod-check" />
               <div class="dropdown-content">
                 <a href="products.html">Women</a>
@@ -49,11 +50,14 @@
             <section class="search-bar-lrg">
               <div class="search">
                 <input type="text" class="searchWord" placeholder="SEARCH" />
-                <button type="submit" class="searchButton">
+                <button type="submit" title="Search" name="Search" class="searchButton">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
             </section>
+          </li>
+          <li>
+            <a href="cart.html">Cart</a>
           </li>
           <li>
             <a href="about.html">About us</a>
@@ -130,10 +134,10 @@
     </main>
     <footer>
       <h3>© 2021</h3>
-      <a href="contact.html"><i class="fab fa-snapchat-ghost"></i></a>
-      <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-      <a href="contact.html"> <i class="fab fa-instagram"></i></a>
-      <a href="contact.html"> <i class="far fa-envelope"></i></a>
+      <a href="contact.html" title="Link to contact"><i class="fab fa-snapchat-ghost"></i></a>
+      <a href="contact.html" title="Link to contact"><i class="fab fa-facebook-f"></i></a>
+      <a href="contact.html" title="Link to contact"><i class="fab fa-instagram"></i></a>
+      <a href="contact.html" title="Link to contact"><i class="far fa-envelope"></i></a>
     </footer>
   </body>
 </html>
