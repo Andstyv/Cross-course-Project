@@ -4,7 +4,7 @@ export const productsArray = [
     name: "Jacket 1",
     description: "A nice blue jacket",
     image: "img/blue_jacket.png",
-    price: 1399,
+    price: 999,
     size: "Small",
   },
   {
@@ -12,7 +12,7 @@ export const productsArray = [
     name: "Jacket 1",
     description: "A nice blue jacket",
     image: "img/blue_jacket.png",
-    price: 1399,
+    price: 1099,
     size: "Medium",
   },
   {
@@ -20,7 +20,7 @@ export const productsArray = [
     name: "Jacket 1",
     description: "A nice blue jacket",
     image: "img/blue_jacket.png",
-    price: 1399,
+    price: 1199,
     size: "Large",
   },
   {
@@ -28,7 +28,7 @@ export const productsArray = [
     name: "Jacket 2",
     description: "A great green jacket",
     image: "img/green_jacket.png",
-    price: 1599,
+    price: 1299,
     size: "Small",
   },
   {
@@ -36,7 +36,7 @@ export const productsArray = [
     name: "Jacket 2",
     description: "A great green jacket",
     image: "img/green_jacket.png",
-    price: 1599,
+    price: 1399,
     size: "Medium",
   },
   {
@@ -44,7 +44,7 @@ export const productsArray = [
     name: "Jacket 2",
     description: "A great green jacket",
     image: "img/green_jacket.png",
-    price: 1599,
+    price: 1449,
     size: "Large",
   },
   {
@@ -52,7 +52,7 @@ export const productsArray = [
     name: "Jacket 3",
     description: "A warm red jacket",
     image: "img/red_jacket.png",
-    price: 999,
+    price: 699,
     size: "Small",
   },
   {
@@ -60,7 +60,7 @@ export const productsArray = [
     name: "Jacket 3",
     description: "A warm red jacket",
     image: "img/red_jacket.png",
-    price: 999,
+    price: 749,
     size: "Medium",
   },
   {
@@ -68,7 +68,7 @@ export const productsArray = [
     name: "Jacket 3",
     description: "A warm red jacket",
     image: "img/red_jacket.png",
-    price: 999,
+    price: 799,
     size: "Large",
   },
   {
@@ -76,7 +76,7 @@ export const productsArray = [
     name: "Jacket 4",
     description: "A cool yellow jacket",
     image: "img/yellow_jacket.png",
-    price: 1199,
+    price: 499,
     size: "Small",
   },
   {
@@ -84,7 +84,7 @@ export const productsArray = [
     name: "Jacket 4",
     description: "A cool yellow jacket",
     image: "img/yellow_jacket.png",
-    price: 1199,
+    price: 549,
     size: "Medium",
   },
   {
@@ -92,7 +92,7 @@ export const productsArray = [
     name: "Jacket 4",
     description: "A cool yellow jacket",
     image: "img/yellow_jacket.png",
-    price: 1199,
+    price: 649,
     size: "Large",
   },
 ];

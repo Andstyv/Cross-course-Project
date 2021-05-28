@@ -2,10 +2,38 @@ const cartItems = JSON.parse(localStorage.getItem("cartList"));
 const cartContainer = document.querySelector(".cart-item");
 const price = document.querySelector(".price");
 const shipping = document.querySelector(".shipping");
+const totalPrice = document.querySelector("#price-total");
 const subtotal = document.querySelector("#subsum");
+const showCheckout = document.querySelector(".submit-checkout");
+const checkout = document.querySelector(".checkout-container");
+const removeItems = document.querySelector(".remove-item");
+const productInfo = document.querySelectorAll(".product-info");
+const backBtn = document.querySelector("#bacc");
+
+showCheckout.addEventListener("click", function () {
+  checkout.style.display = "flex";
+  showCheckout.style.display = "none";
+  removeItems.style.display = "none";
+});
+
+// function goBack() {
+//   console.log("LES GO BACC");
+// }
+backBtn.addEventListener("click", function () {
+  window.history.back();
+  console.log("Going back");
+});
 
 cartContainer.innerHTML = "";
 let newSum = 0;
+
+removeItems.addEventListener("click", function () {
+  cartContainer.innerHTML = `<h2>Cart is empty</h2>`;
+  removeItems.style.display = "none";
+  cartContainer.style.borderBottom = "none";
+  totalPrice.innerHTML = `<h3>-</h3>`;
+  subtotal.innerHTML = `<h3>-</h3>`;
+});
 
 cartItems.forEach(function (product) {
   cartContainer.innerHTML += `
@@ -17,8 +45,6 @@ cartItems.forEach(function (product) {
     <h3>Size: ${product.size}</h3>
     <h3>Price: ${product.price}</h3>
     `;
-  price.innerHTML = `<h3>Price</h3>
-<h3>${newSum}</h3>`;
 
   shipping.innerHTML = `<h3>Shipping</h3>
     <h3>FREE</h3>`;
@@ -27,6 +53,7 @@ cartItems.forEach(function (product) {
   for (let i = 0; i < cartItems.length; i++) {
     newSum += product.price;
   }
+  totalPrice.innerHTML = `<h3>${newSum}</h3>`;
   subtotal.innerHTML = `<h3>${newSum}</h3>`;
 });
 console.log(newSum);

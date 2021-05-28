@@ -1,4 +1,5 @@
 const contactForm = document.getElementById("contact");
+const checkoutForm = document.getElementById("checkout-form");
 
 const nameError = document.getElementById("name-error");
 const mailError = document.getElementById("email-error");
@@ -34,8 +35,12 @@ function validateForm(event) {
     txtError.style.display = "block";
   }
 }
+function validateCheckout() {
+  console.log("Checkout");
+}
 
 contactForm.addEventListener("submit", validateForm);
+//checkoutForm.addEventListener("submit", validateCheckout);
 
 function checkLength(value, len) {
   if (value.trim().length > len) {

@@ -4,6 +4,7 @@ let cartArray = [];
 
 const addToCart = document.querySelectorAll(".prod-addcart");
 const numberOfItems = document.querySelector(".numberOfItems");
+const itemPrice = document.querySelector(".itemprice");
 
 let sel = document.getElementById("sizes");
 
@@ -20,6 +21,23 @@ addToCart.forEach(function (button) {
 
     // viewCart(cartArray);
   };
+});
+sel.addEventListener("change", function () {
+  console.log(sel.value);
+  const productAdd = productsArray.find((item) => item.id === sel.value);
+  console.log(productAdd.price);
+  itemPrice.textContent = `${productAdd.price} ,-`;
+
+  //   if (sel.value === "1" || "11") {
+  //     console.log("Størrelse 1");
+  //     itemPrice.textContent = `999 ,-`;
+  //   } else if (sel.value === "2") {
+  //     console.log("Størrelse 2");
+  //     itemPrice.textContent = `1 099 ,-`;
+  //   } else {
+  //     console.log("Strrelse 3");
+  //     itemPrice.textContent = `1 199 ,-`;
+  //   }
 });
 
 // function viewCart(cartItems) {
