@@ -1,5 +1,6 @@
 const contactForm = document.getElementById("contact");
 const checkoutForm = document.getElementById("checkout-form");
+const socContact = document.querySelector(".soc-contact");
 
 const nameError = document.getElementById("name-error");
 const mailError = document.getElementById("email-error");
@@ -24,15 +25,19 @@ function validateForm(event) {
   } else {
     mailError.style.display = "block";
   }
-  if (checkLength(contactTel.value, 8)) {
+  if (validateTel(contactTel.value)) {
     telError.style.display = "none";
   } else {
     telError.style.display = "block";
   }
-  if (checkLength(contactMsg.value, 20)) {
+  if (checkLength(contactMsg.value, 10)) {
     txtError.style.display = "none";
   } else {
     txtError.style.display = "block";
+  }
+  if (checkLength(contactName.value, 0) && validateEmail(contactMail.value) && validateTel(contactTel.value) && checkLength(contactMsg.value, 10)) {
+    contactForm.innerHTML = `<h3>Message sent!</h3>`;
+    socContact.textContent = "";
   }
 }
 function validateCheckout() {
@@ -48,6 +53,11 @@ function checkLength(value, len) {
   } else {
     return false;
   }
+}
+function validateTel(contactTel) {
+  const regExTel = /^[0-9]{8}$/;
+  const telMatch = regExTel.test(contactTel);
+  return telMatch;
 }
 
 function validateEmail(contactMail) {
