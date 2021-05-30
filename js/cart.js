@@ -54,4 +54,3 @@ cartItems.forEach(function (product) {
   totalPrice.innerHTML = `<h3>${newSum}</h3>`;
   subtotal.innerHTML = `<h3>${newSum}</h3>`;
 });
-console.log(newSum);
