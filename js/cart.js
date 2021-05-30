@@ -16,12 +16,8 @@ showCheckout.addEventListener("click", function () {
   removeItems.style.display = "none";
 });
 
-// function goBack() {
-//   console.log("LES GO BACC");
-// }
 backBtn.addEventListener("click", function () {
   window.history.back();
-  console.log("Going back");
 });
 
 cartContainer.innerHTML = "";

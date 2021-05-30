@@ -55,12 +55,9 @@ function validateCheckout(event) {
     validateZip(contactZip.value) &&
     checkLength(contactCity.value, 0)
   ) {
-    console.log("SUCCESS");
     setTimeout(function () {
       window.location.href = "checkout-success.html";
     }, 1000);
-  } else {
-    console.log("FAILURE");
   }
 }
 
@@ -89,34 +86,4 @@ function validateTel(contactTel) {
   const regExTel = /^[0-9]{8}$/;
   const telMatch = regExTel.test(contactTel);
   return telMatch;
-}
-
-{
-  /* <form id="checkout-form">
-  <div class="checkout-error" id="checkout-name-error">
-    Please enter a name
-  </div>
-  <input type="text" name="contactname" class="contactname" placeholder="Name" />
-  <div class="checkout-error" id="checkout-mail-error">
-    Please enter a valid email
-  </div>
-  <input type="email" name="contactmail" class="contactmail" placeholder="E-mail" />
-  <div class="checkout-error" id="checkout-tel-error">
-    Please enter a valid telephone number
-  </div>
-  <input type="tel" name="contacttel" class="contacttel" placeholder="Telephone" />
-  <div class="checkout-error" id="checkout-add-error">
-    Please enter a valid address
-  </div>
-  <input type="text" name="contactad" class="contactad" placeholder="Address" />
-  <div class="checkout-error" id="checkout-zip-error">
-    Please enter a valid zip code
-  </div>
-  <input type="number" name="zipcode" class="zipcode" placeholder="Zip Code" />
-  <div class="checkout-error" id="checkout-city-error">
-    Please enter a valid city
-  </div>
-  <input type="text" name="city" class="city" placeholder="City" />
-  <input type="submit" class="checkout-submit" value="Send" />
-</form>; */
 }

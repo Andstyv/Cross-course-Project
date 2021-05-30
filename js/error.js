@@ -40,12 +40,8 @@ function validateForm(event) {
     socContact.textContent = "";
   }
 }
-function validateCheckout() {
-  console.log("Checkout");
-}
 
 contactForm.addEventListener("submit", validateForm);
-//checkoutForm.addEventListener("submit", validateCheckout);
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
