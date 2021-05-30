@@ -1,7 +1,8 @@
 export const productsArray = [
   {
     id: "1",
-    name: "Jacket 1",
+    name: "Mt. Maclure",
+    color: "Blue",
     description: "A nice blue jacket",
     image: "img/blue_jacket.png",
     price: 999,
@@ -9,7 +10,8 @@ export const productsArray = [
   },
   {
     id: "2",
-    name: "Jacket 1",
+    name: "Mt. Maclure",
+    color: "Blue",
     description: "A nice blue jacket",
     image: "img/blue_jacket.png",
     price: 1099,
@@ -17,7 +19,8 @@ export const productsArray = [
   },
   {
     id: "3",
-    name: "Jacket 1",
+    name: "Mt. Maclure",
+    color: "Blue",
     description: "A nice blue jacket",
     image: "img/blue_jacket.png",
     price: 1199,
@@ -25,7 +28,8 @@ export const productsArray = [
   },
   {
     id: "4",
-    name: "Jacket 2",
+    name: "Glacier Point",
+    color: "Green",
     description: "A great green jacket",
     image: "img/green_jacket.png",
     price: 1299,
@@ -33,7 +37,8 @@ export const productsArray = [
   },
   {
     id: "5",
-    name: "Jacket 2",
+    name: "Glacier Point",
+    color: "Green",
     description: "A great green jacket",
     image: "img/green_jacket.png",
     price: 1399,
@@ -41,7 +46,8 @@ export const productsArray = [
   },
   {
     id: "6",
-    name: "Jacket 2",
+    name: "Glacier Point",
+    color: "Green",
     description: "A great green jacket",
     image: "img/green_jacket.png",
     price: 1449,
@@ -49,7 +55,8 @@ export const productsArray = [
   },
   {
     id: "7",
-    name: "Jacket 3",
+    name: "Kuna Peak",
+    color: "Red",
     description: "A warm red jacket",
     image: "img/red_jacket.png",
     price: 699,
@@ -57,7 +64,8 @@ export const productsArray = [
   },
   {
     id: "8",
-    name: "Jacket 3",
+    name: "Kuna Peak",
+    color: "Red",
     description: "A warm red jacket",
     image: "img/red_jacket.png",
     price: 749,
@@ -65,7 +73,8 @@ export const productsArray = [
   },
   {
     id: "9",
-    name: "Jacket 3",
+    name: "Kuna Peak",
+    color: "Red",
     description: "A warm red jacket",
     image: "img/red_jacket.png",
     price: 799,
@@ -73,7 +82,8 @@ export const productsArray = [
   },
   {
     id: "10",
-    name: "Jacket 4",
+    name: "Sheperd Crest",
+    color: "Yellow",
     description: "A cool yellow jacket",
     image: "img/yellow_jacket.png",
     price: 499,
@@ -81,7 +91,8 @@ export const productsArray = [
   },
   {
     id: "11",
-    name: "Jacket 4",
+    name: "Sheperd Crest",
+    color: "Yellow",
     description: "A cool yellow jacket",
     image: "img/yellow_jacket.png",
     price: 549,
@@ -89,7 +100,8 @@ export const productsArray = [
   },
   {
     id: "12",
-    name: "Jacket 4",
+    name: "Sheperd Crest",
+    color: "Yellow",
     description: "A cool yellow jacket",
     image: "img/yellow_jacket.png",
     price: 649,

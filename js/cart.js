@@ -8,7 +8,7 @@ const showCheckout = document.querySelector(".submit-checkout");
 const checkout = document.querySelector(".checkout-container");
 const removeItems = document.querySelector(".remove-item");
 const productInfo = document.querySelectorAll(".product-info");
-const backBtn = document.querySelector("#bacc");
+const backBtn = document.querySelector("#go-back");
 
 showCheckout.addEventListener("click", function () {
   checkout.style.display = "flex";
@@ -33,6 +33,7 @@ removeItems.addEventListener("click", function () {
   cartContainer.style.borderBottom = "none";
   totalPrice.innerHTML = `<h3>-</h3>`;
   subtotal.innerHTML = `<h3>-</h3>`;
+  shipping.innerHTML = `<h3>-</h3>`;
 });
 
 cartItems.forEach(function (product) {
@@ -41,9 +42,10 @@ cartItems.forEach(function (product) {
     <img src="${product.image}" alt="${product.name}" class="cart-img">
     <div class="product-spec">
     <h3>${product.name}</h3>
-    <h3>COLOR: </h3>
-    <h3>Size: ${product.size}</h3>
-    <h3>Price: ${product.price}</h3>
+    </br>
+    <h3>Color: <i>${product.color}</i></h3>
+    <h3>Size: <i>${product.size}</i></h3>
+    <h3>Price: <i>${product.price}</i></h3>
     `;
 
   shipping.innerHTML = `<h3>Shipping</h3>

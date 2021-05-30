@@ -36,7 +36,6 @@
         <ul class="main-nav">
           <li>
             <section class="prod-menu">
-              <button type="submit" class="iconButton"></button>
               <label for="prod-check" class="nav-prod"><p>Products</p></label>
               <input type="checkbox" id="prod-check" />
               <div class="dropdown-content">
@@ -50,7 +49,7 @@
             <section class="search-bar-lrg">
               <div class="search">
                 <input type="text" class="searchWord" placeholder="SEARCH" />
-                <button type="submit" class="searchButton">
+                <button type="submit" class="searchButton" aria-label="Search Button">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
@@ -96,9 +95,8 @@
       </div>
 
       <section class="cart-view">
-        <a href="products.html" class="back-btn-cart"><i class="fas fa-arrow-left"></i>BACK</a>
-        <button id="bacc">Go back btn</button>
-        <button class="remove-item">Empty Cart</button>
+        <!-- <a href="products.html" class="back-btn-cart"><i class="fas fa-arrow-left"></i>BACK</a> -->
+        <button id="go-back">Go back</button>
         <div class="cart-item">
           <h2 class="your-cart">Your cart</h2>
           <div class="product-info">
@@ -110,23 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="checkout-container">
-          <form id="checkout-form">
-            <div class="checkout-error" id="checkout-name-error">Please enter a name</div>
-            <input type="text" name="contactname" class="contactname" placeholder="Name" />
-            <div class="checkout-error" id="checkout-mail-error">Please enter a valid email</div>
-            <input type="email" name="contactmail" class="contactmail" placeholder="E-mail" />
-            <div class="checkout-error" id="checkout-tel-error">Please enter a valid telephone number</div>
-            <input type="tel" name="contacttel" class="contacttel" placeholder="Telephone (8 char)" />
-            <div class="checkout-error" id="checkout-add-error">Please enter a valid address</div>
-            <input type="text" name="contactad" class="contactad" placeholder="Address" />
-            <div class="checkout-error" id="checkout-zip-error">Please enter a valid zip code</div>
-            <input type="number" name="zipcode" class="zipcode" placeholder="Zip Code (4 char)" />
-            <div class="checkout-error" id="checkout-city-error">Please enter a valid city</div>
-            <input type="text" name="city" class="city" placeholder="City" />
-            <input type="submit" class="checkout-submit" value="Confirm Order" />
-          </form>
-        </div>
+        <button class="remove-item">Empty Cart</button>
         <div class="cart-pmt">
           <h2 class="order-total">Order total</h2>
           <div class="price">
@@ -145,15 +127,32 @@
           <div class="check-btn">
             <a href="#"> <input type="submit" class="submit-checkout" value="Proceed to Checkout" /></a>
           </div>
+          <div class="checkout-container">
+            <form id="checkout-form">
+              <div class="checkout-error" id="checkout-name-error">Please enter a name</div>
+              <input type="text" name="contactname" class="contactname" placeholder="Name" />
+              <div class="checkout-error" id="checkout-mail-error">Please enter a valid email</div>
+              <input type="email" name="contactmail" class="contactmail" placeholder="E-mail" />
+              <div class="checkout-error" id="checkout-tel-error">Please enter a 8-digit telephone number</div>
+              <input type="tel" name="contacttel" class="contacttel" placeholder="Telephone (8 char)" />
+              <div class="checkout-error" id="checkout-add-error">Please enter a valid address</div>
+              <input type="text" name="contactad" class="contactad" placeholder="Address" />
+              <div class="checkout-error" id="checkout-zip-error">Please enter a 4-digit zip code</div>
+              <input type="number" name="zipcode" class="zipcode" placeholder="Zip Code (4 char)" />
+              <div class="checkout-error" id="checkout-city-error">Please enter a valid city</div>
+              <input type="text" name="city" class="city" placeholder="City" />
+              <input type="submit" class="checkout-submit" value="Confirm Order" />
+            </form>
+          </div>
         </div>
       </section>
     </main>
     <footer>
       <h3>© 2021</h3>
-      <a href="contact.html"><i class="fab fa-snapchat-ghost"></i></a>
-      <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-      <a href="contact.html"> <i class="fab fa-instagram"></i></a>
-      <a href="contact.html"> <i class="far fa-envelope"></i></a>
+      <a href="contact.html" id="contact-links sc-link"><i class="fab fa-snapchat-ghost"></i>SC Contact</a>
+      <a href="contact.html" id="contact-links fb-link"><i class="fab fa-facebook-f"></i>FB Contact</a>
+      <a href="contact.html" id="contact-links ig-link"> <i class="fab fa-instagram"></i>IG Contact</a>
+      <a href="contact.html" id="contact-links mail-link"> <i class="far fa-envelope"></i>Mail Contact</a>
     </footer>
     <script src="js/error-checkout.js" type="module"></script>
     <script src="js/cart.js" type="module"></script>

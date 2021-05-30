@@ -25,7 +25,6 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <script src="js/script.js"></script>
   </head>
   <body class="products-body">
     <header>
@@ -50,7 +49,7 @@
             <section class="search-bar-lrg">
               <div class="search">
                 <input type="text" class="searchWord" placeholder="SEARCH" />
-                <button type="submit" class="searchButton">
+                <button type="submit" class="searchButton" aria-label="Search Button">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
@@ -69,16 +68,19 @@
       <section class="cart-view-success">
         <h2>Than you for your order!</h2>
         <h3>Check your e-mail for an order confirmation</h3>
-        <h3>Order ID: #927482</h3>
-        <a href="products.html" class="back-btn"><i class="fas fa-arrow-left"></i>BACK</a>
+        <h3 class="orderID">Order ID: #927482</h3>
+        <div class="check-btn">
+          <a href="products.html"> <input type="submit" id="go-back-home" value="Return to home page" /></a>
+        </div>
       </section>
     </main>
     <footer>
       <h3>© 2021</h3>
-      <a href="contact.html"><i class="fab fa-snapchat-ghost"></i></a>
-      <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-      <a href="contact.html"> <i class="fab fa-instagram"></i></a>
-      <a href="contact.html"> <i class="far fa-envelope"></i></a>
+      <a href="contact.html" id="contact-links sc-link"><i class="fab fa-snapchat-ghost"></i>SC Contact</a>
+      <a href="contact.html" id="contact-links fb-link"><i class="fab fa-facebook-f"></i>FB Contact</a>
+      <a href="contact.html" id="contact-links ig-link"> <i class="fab fa-instagram"></i>IG Contact</a>
+      <a href="contact.html" id="contact-links mail-link"> <i class="far fa-envelope"></i>Mail Contact</a>
     </footer>
+    <script src="js/checkout.js"></script>
   </body>
 </html>

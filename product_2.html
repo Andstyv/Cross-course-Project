@@ -36,7 +36,6 @@
         <ul class="main-nav">
           <li>
             <section class="prod-menu">
-              <button type="submit" class="iconButton"></button>
               <label for="prod-check"><p>Products</p></label>
               <input type="checkbox" id="prod-check" />
               <div class="dropdown-content">
@@ -50,11 +49,19 @@
             <section class="search-bar-lrg">
               <div class="search">
                 <input type="text" class="searchWord" placeholder="SEARCH" />
-                <button type="submit" class="searchButton">
+                <button type="submit" class="searchButton" aria-label="Search Button">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
             </section>
+          </li>
+          <li>
+            <a href="cart.html"
+              ><button type="submit" class="iconButton2" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+              <span class="numberOfItems"></span>
+            </a>
           </li>
           <li>
             <a href="about.html">About us</a>
@@ -88,10 +95,11 @@
         </div>
       </section>
       <section class="shopcart">
-        <h5 class="numberOfItems"></h5>
         <a href="cart.html"
           ><button type="submit" class="iconButton2">
-            <i class="fas fa-shopping-cart"></i></button
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="numberOfItems2"></span
         ></a>
       </section>
       <section class="product1-lrg">
@@ -100,31 +108,40 @@
         </div>
         <div class="prodlrg-2">
           <a href="products.html" class="back-btn"><i class="fas fa-arrow-left"></i>BACK</a>
+          <h2 class="product-title">Glacier Point</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="price-size">
-            <p class="itemprice">Select size ></p>
-            <div class="size-select">
-              <select name="sizes" id="sizes">
-                <option value="" selected disabled hidden>CHOOSE SIZE</option>
-                <option value="4" label="Small">SMALL</option>
-                <option value="5" label="Medium">MEDIUM</option>
-                <option value="6" label="Large">LARGE</option>
-                <option value="" label="X-Large" disabled>X-LARGE (Out of Stock)</option>
-              </select>
+            <p class="itemprice">1299 ,-</p>
+            <div class="size-cart">
+              <div class="size-select">
+                <select name="sizes" id="sizes">
+                  <option value="" selected disabled hidden>Sizes</option>
+                  <option value="4" label="Small">SMALL</option>
+                  <option value="5" label="Medium">MEDIUM</option>
+                  <option value="6" label="Large">LARGE</option>
+                  <option value="" label="X-Large" disabled>X-LARGE (Out of Stock)</option>
+                </select>
+              </div>
+              <div class="addcart-btn">
+                <a href="#"> <input class="prod-addcart" data-product="1" type="submit" value="ADD TO CART >" /></a>
+              </div>
             </div>
           </div>
-          <div class="addcart-btn">
-            <a href="#"> <input class="prod-addcart" data-product="2" type="submit" value="ADD TO CART" /></a>
+          <div>
+            <p class="add-success">Item added successfully</p>
+          </div>
+          <div class="gocart-btn">
+            <a href="cart.html"> <input class="prod-gocart" type="submit" value="GO TO CART" /></a>
           </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <h3>© 2021</h3>
-      <a href="contact.html"><i class="fab fa-snapchat-ghost"></i></a>
-      <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-      <a href="contact.html"> <i class="fab fa-instagram"></i></a>
-      <a href="contact.html"> <i class="far fa-envelope"></i></a>
+      <a href="contact.html" id="contact-links sc-link"><i class="fab fa-snapchat-ghost"></i>SC Contact</a>
+      <a href="contact.html" id="contact-links fb-link"><i class="fab fa-facebook-f"></i>FB Contact</a>
+      <a href="contact.html" id="contact-links ig-link"> <i class="fab fa-instagram"></i>IG Contact</a>
+      <a href="contact.html" id="contact-links mail-link"> <i class="far fa-envelope"></i>Mail Contact</a>
     </footer>
   </body>
 </html>

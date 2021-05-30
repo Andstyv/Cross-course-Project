@@ -25,7 +25,7 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <script src="js/script.js" type="module"></script>
+    <!-- <script src="js/script.js" type="module"></script> -->
   </head>
   <body class="products-body">
     <header>
@@ -57,7 +57,11 @@
             </section>
           </li>
           <li>
-            <a href="cart.html">Cart</a>
+            <a href="cart.html"
+              ><button type="submit" class="iconButton2" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </a>
           </li>
           <li>
             <a href="about.html">About us</a>
@@ -100,6 +104,7 @@
       <section class="product1">
         <a href="product_1.html"> <img src="img/blue_jacket.png" alt="Blue rain jacket" class="jacketimg_blue" /></a>
         <div class="prod-text">
+          <h2 class="product-title">Mt. Maclure</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p>
             Maecenas suscipit nisi lacus, eu ullamcorper sapien hendrerit quis. In risus sapien, suscipit non tempor eget, dictum non mi. In molestie lobortis ligula, eget iaculis justo placerat
@@ -111,6 +116,7 @@
       <section class="product2">
         <a href="product_2.html"> <img src="img/green_jacket.png" alt="Green rain jacket" class="jacketimg_green" /></a>
         <div class="prod-text">
+          <h2 class="product-title">Glacier Point</h2>
           <p>Vestibulum accumsan elementum iaculis. Proin in ullamcorper quam. Phasellus rutrum rutrum urna at commodo.</p>
           <p>Etiam tincidunt nisi id ante convallis placerat. Nunc mattis interdum rutrum. Sed ut feugiat quam. Mauris molestie eros leo, ac euismod ante venenatis sit amet.</p>
           <a href="product_2.html" class="prod-explore">Explore</a>
@@ -119,6 +125,7 @@
       <section class="product3">
         <a href="product_3.html"> <img src="img/red_jacket.png" alt="Red rain jacket" class="jacketimg_red" /></a>
         <div class="prod-text">
+          <h2 class="product-title">Kuna Peak</h2>
           <p>Nullam et ex egestas nisl mollis interdum quis facilisis mauris. Nunc feugiat, risus euismod posuere congue, tellus nulla efficitur arcu.</p>
           <p>Curabitur eget iaculis augue. Praesent fringilla felis feugiat nisl molestie placerat. Nullam gravida, mi in sagittis pharetra.</p>
           <a href="product_3.html" class="prod-explore">Explore</a>
@@ -127,6 +134,7 @@
       <section class="product4">
         <a href="product_4.html"> <img src="img/yellow_jacket.png" alt="Yellow rain jacket" class="jacketimg_yellow" /></a>
         <div class="prod-text">
+          <h2 class="product-title">Sheperd Crest</h2>
           <p>Ut id metus nec eros placerat mollis. Vivamus varius nisi vitae nunc suscipit laoreet. Suspendisse at posuere enim.</p>
           <p>Phasellus mollis purus et risus cursus dapibus. Vivamus consectetur ullamcorper risus. Vivamus placerat quam eget.</p>
           <a href="product_4.html" class="prod-explore">Explore</a>
@@ -135,10 +143,10 @@
     </main>
     <footer>
       <h3>© 2021</h3>
-      <a href="contact.html" title="Link to contact"><i class="fab fa-snapchat-ghost"></i></a>
-      <a href="contact.html" title="Link to contact"><i class="fab fa-facebook-f"></i></a>
-      <a href="contact.html" title="Link to contact"><i class="fab fa-instagram"></i></a>
-      <a href="contact.html" title="Link to contact"><i class="far fa-envelope"></i></a>
+      <a href="contact.html" id="contact-links sc-link"><i class="fab fa-snapchat-ghost"></i>SC Contact</a>
+      <a href="contact.html" id="contact-links fb-link"><i class="fab fa-facebook-f"></i>FB Contact</a>
+      <a href="contact.html" id="contact-links ig-link"> <i class="fab fa-instagram"></i>IG Contact</a>
+      <a href="contact.html" id="contact-links mail-link"> <i class="far fa-envelope"></i>Mail Contact</a>
     </footer>
   </body>
 </html>
