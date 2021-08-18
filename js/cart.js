@@ -1,4 +1,4 @@
-const cartItems = JSON.parse(localStorage.getItem("cartList"));
+const cartItems = JSON.parse(localStorage.getItem("newList"));
 const cartContainer = document.querySelector(".cart-item");
 const price = document.querySelector(".price");
 const shipping = document.querySelector(".shipping");
@@ -35,12 +35,12 @@ removeItems.addEventListener("click", function () {
 cartItems.forEach(function (product) {
   cartContainer.innerHTML += `
     <div class="product-info">
-    <img src="${product.image}" alt="${product.name}" class="cart-img">
+    <img src="${product.img}" alt="${product.name}" class="cart-img">
     <div class="product-spec">
     <h3>${product.name}</h3>
     </br>
-    <h3>Color: <i>${product.color}</i></h3>
-    <h3>Size: <i>${product.size}</i></h3>
+
+    <h3><i>${product.size}</i></h3>
     <h3>Price: <i>${product.price}</i></h3>
     `;
 
