@@ -28,6 +28,7 @@ async function fetchProductById(url) {
     productPrice.innerHTML = `${details.prices.price / 100} ,-`;
   } catch (err) {
     console.log(err);
+    prodDetails.innerHTML`An error occured when fetching the API: ${err}`;
   }
 }
 fetchProductById(productUrl);
