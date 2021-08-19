@@ -1,4 +1,4 @@
-const cartItems = JSON.parse(localStorage.getItem("newList"));
+const cartItems = JSON.parse(localStorage.getItem("cartList"));
 const cartContainer = document.querySelector(".cart-item");
 const shipping = document.querySelector(".shipping");
 const totalPrice = document.querySelector("#price-total");

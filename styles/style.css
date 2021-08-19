@@ -349,7 +349,7 @@ nav {
     display: none;
   }
   .product-lrg {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -477,6 +477,8 @@ nav {
   .products-prod {
     margin-top: 50px;
     grid-area: main;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .hamb-menu,
