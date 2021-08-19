@@ -1,8 +1,8 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const productTitle = document.querySelector(".product-title");
 
+const productTitle = document.querySelector(".product-title");
 const prodDetails = document.querySelector(".prodlrg-1");
 const productPrice = document.querySelector(".itemprice");
 const sizeSelector = document.getElementById("sizes");
@@ -17,7 +17,7 @@ async function fetchProductById(url) {
     const details = await response.json();
     const variations = details.variations;
 
-    prodDetails.innerHTML = `<a href="#"> <img src="${details.images[0].src}" alt="${details.images[0].alt}" class="jacketimg_blue-lrg" /></a>`;
+    prodDetails.innerHTML = `<a href="#"> <img src="${details.images[0].src}" alt="${details.images[0].alt}" class="jacketimg-lrg" /></a>`;
     productTitle.innerHTML = `${details.name}`;
 
     variations.forEach(function (variations) {
@@ -34,7 +34,7 @@ async function fetchProductById(url) {
 fetchProductById(productUrl);
 
 sizeSelector.onchange = function (event) {
-  const newUrl = baseUrl + `${event.target.value}`;
+  const sizeValueURL = baseUrl + `${event.target.value}`;
 
-  fetchProductById(newUrl);
+  fetchProductById(sizeValueURL);
 };

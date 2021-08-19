@@ -27,7 +27,7 @@ async function fetchToCart(url) {
 
     cartArray.push(cartObject);
 
-    localStorage.setItem("newList", JSON.stringify(cartArray));
+    localStorage.setItem("cartList", JSON.stringify(cartArray));
     showCartBtn.style.display = "block";
     addSuccess.style.display = "block";
     numberOfItems.style.display = "inline";
@@ -38,8 +38,6 @@ async function fetchToCart(url) {
     setInterval(function () {
       addSuccess.style.display = "none";
     }, 2000);
-
-    console.log(details);
   } catch (err) {
     console.log(err);
   }
