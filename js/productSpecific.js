@@ -6,7 +6,7 @@ const productTitle = document.querySelector(".product-title");
 const prodDetails = document.querySelector(".prodlrg-1");
 const productPrice = document.querySelector(".itemprice");
 const sizeSelector = document.getElementById("sizes");
-const baseUrl = "http://cms-ca.styve.digital/wp-json/wc/store/products/";
+const baseUrl = "https://cms-ca.styve.digital/wp-json/wc/store/products/";
 const productDesc = document.querySelector(".product-description");
 
 const productUrl = baseUrl + id;
