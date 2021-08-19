@@ -20,7 +20,5 @@ async function getProducts(url) {
     
     </div>`;
   });
-
-  console.log(products);
 }
 getProducts(url);

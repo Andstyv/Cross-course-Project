@@ -1,13 +1,11 @@
 const cartItems = JSON.parse(localStorage.getItem("newList"));
 const cartContainer = document.querySelector(".cart-item");
-const price = document.querySelector(".price");
 const shipping = document.querySelector(".shipping");
 const totalPrice = document.querySelector("#price-total");
 const subtotal = document.querySelector("#subsum");
 const showCheckout = document.querySelector(".submit-checkout");
 const checkout = document.querySelector(".checkout-container");
 const removeItems = document.querySelector(".remove-item");
-const productInfo = document.querySelectorAll(".product-info");
 const backBtn = document.querySelector("#go-back");
 
 showCheckout.addEventListener("click", function () {

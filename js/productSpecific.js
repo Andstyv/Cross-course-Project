@@ -2,8 +2,8 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const productTitle = document.querySelector(".product-title");
-const productContainer = document.querySelector(".product1-lrg");
-const prodLrg1 = document.querySelector(".prodlrg-1");
+
+const prodDetails = document.querySelector(".prodlrg-1");
 const productPrice = document.querySelector(".itemprice");
 const sizeSelector = document.getElementById("sizes");
 const baseUrl = "http://cms-ca.styve.digital/wp-json/wc/store/products/";
@@ -17,7 +17,7 @@ async function fetchProductById(url) {
     const details = await response.json();
     const variations = details.variations;
 
-    prodLrg1.innerHTML = `<a href="#"> <img src="${details.images[0].src}" alt="${details.images[0].alt}" class="jacketimg_blue-lrg" /></a>`;
+    prodDetails.innerHTML = `<a href="#"> <img src="${details.images[0].src}" alt="${details.images[0].alt}" class="jacketimg_blue-lrg" /></a>`;
     productTitle.innerHTML = `${details.name}`;
 
     variations.forEach(function (variations) {
@@ -25,7 +25,7 @@ async function fetchProductById(url) {
     });
 
     productDesc.innerHTML = `${details.description}`;
-    productPrice.innerHTML = `Price: ${details.prices.price / 100} ,-`;
+    productPrice.innerHTML = `${details.prices.price / 100} ,-`;
   } catch (err) {
     console.log(err);
   }

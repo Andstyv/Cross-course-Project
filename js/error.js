@@ -1,5 +1,4 @@
 const contactForm = document.getElementById("contact");
-const checkoutForm = document.getElementById("checkout-form");
 const socContact = document.querySelector(".soc-contact");
 
 const nameError = document.getElementById("name-error");
