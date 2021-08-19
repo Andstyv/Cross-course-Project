@@ -1,4 +1,4 @@
-const url = "http://cms-ca.styve.digital/wp-json/wc/store/products";
+const url = "https://cms-ca.styve.digital/wp-json/wc/store/products";
 const productsContainer = document.querySelector(".products-grid");
 
 async function getProducts(url) {
