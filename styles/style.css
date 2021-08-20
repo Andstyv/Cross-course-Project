@@ -984,15 +984,12 @@ nav {
 .prod-gocart:hover,
 .prod-addcart:hover,
 .submit-checkout:hover,
-#go-back-home:hover {
-  color: black;
-  background: #fcfff5;
-}
+#go-back-home:hover,
 #go-back:hover,
 .remove-item:hover {
-  cursor: pointer;
   color: black;
   background: #fcfff5;
+  cursor: pointer;
 }
 
 #sizes {
