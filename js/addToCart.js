@@ -40,13 +40,15 @@ async function fetchToCart(url) {
     }, 2000);
   } catch (err) {
     console.log(err);
+    addSuccess.style.display = "block";
+    addSuccess.innerHTML = `ERROR: ${err}`;
   }
 }
 
 addToCart.onclick = function () {
-  let value = sizeSelector.options[sizeSelector.selectedIndex].value;
+  let sizeValue = sizeSelector.options[sizeSelector.selectedIndex].value;
 
-  const testUrl = "http://cms-ca.styve.digital/wp-json/wc/store/products/" + value;
+  const newURL = "https://cms-ca.styve.digital/wp-json/wc/store/products/" + sizeValue;
 
-  fetchToCart(testUrl);
+  fetchToCart(newURL);
 };
