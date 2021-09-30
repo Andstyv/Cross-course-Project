@@ -211,6 +211,9 @@ nav {
   .logo {
     height: 100px;
   }
+  nav {
+    margin-right: 0;
+  }
   .nav-prod {
     display: none !important;
   }
@@ -401,9 +404,11 @@ nav {
   #go-back-home {
     padding: 10px;
   }
+  .numberOfItems {
+    margin-top: 6px;
+  }
 }
-.numberOfItems,
-.numberOfItems2 {
+.numberOfItems {
   display: none;
   color: white;
   position: relative;
@@ -411,15 +416,6 @@ nav {
   border-radius: 50%;
   padding: 1px 12px;
   font-weight: 400;
-}
-.numberOfItems2 {
-  bottom: 4px;
-  top: -7.5px;
-  right: 23px;
-  background: none;
-  color: black;
-  font-size: 12px;
-  padding: 0;
 }
 .gocart-btn {
   display: none;

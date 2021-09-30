@@ -2,7 +2,7 @@ const addToCart = document.querySelector(".addcart-btn");
 const showCartBtn = document.querySelector(".gocart-btn ");
 const addSuccess = document.querySelector(".add-success");
 const numberOfItems = document.querySelector(".numberOfItems");
-const numberOfItems2 = document.querySelector(".numberOfItems2");
+
 const cartItems = JSON.parse(localStorage.getItem("cartList"));
 
 let cartArray = cartItems;
@@ -32,9 +32,7 @@ async function fetchToCart(url) {
     showCartBtn.style.display = "block";
     addSuccess.style.display = "block";
     numberOfItems.style.display = "inline";
-    numberOfItems2.style.display = "inline";
     numberOfItems.innerHTML = `${cartArray.length}`;
-    numberOfItems2.innerHTML = `${cartArray.length}`;
 
     setInterval(function () {
       addSuccess.style.display = "none";
