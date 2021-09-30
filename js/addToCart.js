@@ -3,8 +3,9 @@ const showCartBtn = document.querySelector(".gocart-btn ");
 const addSuccess = document.querySelector(".add-success");
 const numberOfItems = document.querySelector(".numberOfItems");
 const numberOfItems2 = document.querySelector(".numberOfItems2");
+const cartItems = JSON.parse(localStorage.getItem("cartList"));
 
-let cartArray = [];
+let cartArray = cartItems;
 
 async function fetchToCart(url) {
   try {
@@ -52,3 +53,11 @@ addToCart.onclick = function () {
 
   fetchToCart(newURL);
 };
+
+function productsInCart() {
+  if (cartItems.length) {
+    numberOfItems.style.display = "inline";
+    numberOfItems.innerHTML = `${cartItems.length}`;
+  }
+}
+productsInCart();

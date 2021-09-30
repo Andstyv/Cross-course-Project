@@ -28,6 +28,7 @@ removeItems.addEventListener("click", function () {
   totalPrice.innerHTML = `<h3>-</h3>`;
   subtotal.innerHTML = `<h3>-</h3>`;
   shipping.innerHTML = `<h3>-</h3>`;
+  localStorage.setItem("cartList", JSON.stringify([]));
 });
 
 cartItems.forEach(function (product) {

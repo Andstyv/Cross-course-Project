@@ -1,9 +1,14 @@
 const productURL = "https://cms-ca.styve.digital/wp-json/wc/store/products";
 const productsContainer = document.querySelector(".products-grid");
+const cartItems = JSON.parse(localStorage.getItem("cartList"));
+const numberOfItems = document.querySelector(".numberOfItems");
+const numberOfItems2 = document.querySelector(".numberOfItems2");
 
 async function getProducts(url) {
   const response = await fetch(url);
   const products = await response.json();
+
+  console.log(cartItems.length);
 
   products.forEach(function (product) {
     productsContainer.innerHTML += `<div class="product-card"> 
@@ -19,3 +24,11 @@ async function getProducts(url) {
   });
 }
 getProducts(productURL);
+
+function productsInCart() {
+  if (cartItems.length) {
+    numberOfItems.style.display = "inline";
+    numberOfItems.innerHTML = `${cartItems.length}`;
+  }
+}
+productsInCart();

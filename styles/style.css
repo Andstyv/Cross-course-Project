@@ -724,6 +724,9 @@ nav {
 .nav-li-search {
   flex-grow: 2;
 }
+.nav-li-cart {
+  display: flex;
+}
 
 .searchWord {
   width: 100%;

@@ -16,40 +16,44 @@
     </header>
     <nav>
       <div class="row">
+        <div class="dropdown-content">
+          <a href="products.html">Women</a>
+          <a href="products.html">Men</a>
+          <a href="products.html">Kids</a>
+          <a href="products.html" class="link-about">About</a>
+          <a href="products.html" class="link-contact">Contact</a>
+        </div>
         <ul class="main-nav">
           <li>
+            <button class="iconButton"><i class="fas fa-bars"></i></button>
+          </li>
+          <li class="nav-li-prod">
             <section class="prod-menu">
-              <label for="prod-check"><p>Products</p></label>
-              <input type="checkbox" id="prod-check" />
-              <div class="dropdown-content">
-                <a href="products.html">Women</a>
-                <a href="products.html">Men</a>
-                <a href="products.html">Kids</a>
-              </div>
+              <label for="prod-check" class="nav-prod">Products</label>
             </section>
           </li>
-          <li>
+          <li class="nav-li-search">
             <section class="search-bar-lrg">
               <div class="search">
                 <input type="text" class="searchWord" placeholder="SEARCH" />
-                <button type="submit" class="searchButton" aria-label="Search Button">
+                <button type="submit" title="Search" name="Search" class="searchButton">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
             </section>
           </li>
           <li>
-            <a href="cart.html"
+            <a href="cart.html" class="nav-li-cart"
               ><button type="submit" class="iconButton2" aria-label="Shopping Cart">
                 <i class="fas fa-shopping-cart"></i>
               </button>
               <span class="numberOfItems"></span>
             </a>
           </li>
-          <li>
+          <li class="nav-li-about">
             <a href="about.html">About us</a>
           </li>
-          <li>
+          <li class="nav-li-contact">
             <a href="contact.html">Contact</a>
           </li>
         </ul>
