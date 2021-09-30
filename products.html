@@ -16,19 +16,24 @@
     </header>
     <nav>
       <div class="row">
+        <div class="dropdown-content">
+          <a href="products.html">Women</a>
+          <a href="products.html">Men</a>
+          <a href="products.html">Kids</a>
+          <a href="products.html" class="link-about">About</a>
+          <a href="products.html" class="link-contact">Contact</a>
+        </div>
         <ul class="main-nav">
           <li>
+            <button class="iconButton"><i class="fas fa-bars"></i></button>
+          </li>
+          <li class="nav-li-prod">
             <section class="prod-menu">
               <label for="prod-check" class="nav-prod">Products</label>
-              <input type="checkbox" id="prod-check" />
-              <div class="dropdown-content">
-                <a href="products.html">Women</a>
-                <a href="products.html">Men</a>
-                <a href="products.html">Kids</a>
-              </div>
             </section>
           </li>
-          <li>
+
+          <li class="nav-li-search">
             <section class="search-bar-lrg">
               <div class="search">
                 <input type="text" class="searchWord" placeholder="SEARCH" />
@@ -45,45 +50,16 @@
               </button>
             </a>
           </li>
-          <li>
+          <li class="nav-li-about">
             <a href="about.html">About us</a>
           </li>
-          <li>
+          <li class="nav-li-contact">
             <a href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
     <main class="products-main-grid">
-      <div class="small-screen-nav">
-        <section class="hamb-menu">
-          <button type="submit" class="iconButton">
-            <label for="hamburger-check"><i class="fas fa-bars"></i></label>
-          </button>
-          <input type="checkbox" id="hamburger-check" />
-          <div class="dropdown-content">
-            <a href="products.html">Women</a>
-            <a href="products.html">Men</a>
-            <a href="products.html">Kids</a>
-            <a href="about.html" class="drop-about">About</a>
-            <a href="contact.html" class="drop-contact">Contact</a>
-          </div>
-        </section>
-        <section class="search-bar">
-          <div class="search">
-            <input type="text" class="searchWord" placeholder="SEARCH" />
-            <button type="submit" class="searchButton">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </section>
-        <section class="shopcart">
-          <a href="cart.html"
-            ><button type="submit" class="iconButton2">
-              <i class="fas fa-shopping-cart"></i></button
-          ></a>
-        </section>
-      </div>
       <h1 id="products-title">Browse our amazing jackets</h1>
       <section class="products-grid"></section>
     </main>
@@ -95,5 +71,6 @@
       <a href="contact.html" id="contact-links mail-link"> <i class="far fa-envelope"></i>Mail Contact</a>
     </footer>
     <script src="js/productFetcher.js" type="module"></script>
+    <script src="js/hamburgerMenu.js"></script>
   </body>
 </html>
