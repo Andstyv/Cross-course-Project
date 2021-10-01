@@ -126,6 +126,28 @@ nav {
   margin-left: 40px;
   margin-right: 40px;
 }
+.product-categories {
+  margin-left: 40px;
+  display: flex;
+}
+#cat-men-btn,
+#cat-women-btn,
+#cat-kids-btn {
+  padding: 1px 10px 1px 10px;
+  margin-left: 20px;
+  width: 75px;
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#cat-men-btn:hover,
+#cat-women-btn:hover,
+#cat-kids-btn:hover {
+  background: #fff;
+  color: #000;
+}
 
 .prod-explore {
   background: #d1dbbd;
@@ -488,7 +510,7 @@ nav {
 
   #products-title {
     margin-top: 80px;
-    margin-bottom: 2em;
+    margin-bottom: 20px;
     grid-column: span 2;
     width: auto;
   }
@@ -674,11 +696,6 @@ nav {
   margin-bottom: 5px;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
-  border-bottom: 2px solid #fcfff5;
-}
-
 .main-nav > li {
   margin-bottom: 0px;
 }
@@ -722,6 +739,10 @@ nav {
 }
 .nav-li-cart {
   display: flex;
+}
+.nav-li-about a:hover,
+.nav-li-contact a:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .searchWord {
