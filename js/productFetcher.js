@@ -2,7 +2,6 @@ const productURL = "https://cms-ca.styve.digital/wp-json/wc/store/products";
 const productsContainer = document.querySelector(".products-grid");
 const cartItems = JSON.parse(localStorage.getItem("cartList"));
 const numberOfItems = document.querySelector(".numberOfItems");
-const numberOfItems2 = document.querySelector(".numberOfItems2");
 
 async function getProducts(url) {
   const response = await fetch(url);
