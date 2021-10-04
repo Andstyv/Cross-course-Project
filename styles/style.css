@@ -523,7 +523,8 @@ nav {
     justify-self: end;
   }
   .link-about,
-  .link-contact {
+  .link-contact,
+  .link-products {
     display: none !important;
   }
 
@@ -562,7 +563,9 @@ nav {
   .navsmall-cart {
     display: none;
   }
-
+  .cart-img {
+    margin-left: 0 !important;
+  }
   #products-title {
     margin-top: 80px;
     margin-bottom: 20px;
@@ -658,7 +661,7 @@ nav {
   }
   .cart-pmt {
     margin: 40px 0 0 0;
-    min-width: 35%;
+    min-width: 45%;
     align-self: flex-start;
   }
   .price h3 {
@@ -707,6 +710,7 @@ nav {
   }
   .product-info {
     margin-bottom: 30px;
+    padding-bottom: 5px;
   }
   .cart-item {
     border-bottom: none;
