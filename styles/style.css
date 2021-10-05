@@ -280,6 +280,9 @@ nav {
   .nav-li-contact {
     display: none !important;
   }
+  .main-nav li {
+    padding: 0px 10px !important;
+  }
 
   .index-main {
     display: flex;
