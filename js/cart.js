@@ -17,10 +17,6 @@ showCheckout.addEventListener("click", function () {
   removeItems.style.display = "none";
 });
 
-backBtn.addEventListener("click", function () {
-  window.history.back();
-});
-
 cartContainer.innerHTML = "";
 let newSum = 0;
 
