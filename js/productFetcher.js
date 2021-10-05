@@ -43,6 +43,9 @@ function productsInCart() {
   if (cartItems.length) {
     numberOfItems.style.display = "inline";
     numberOfItems.innerHTML = `${cartItems.length}`;
+  } else {
+    numberOfItems.style.display = "none";
+    numberOfItems.innerHTML = "";
   }
 }
 productsInCart();
