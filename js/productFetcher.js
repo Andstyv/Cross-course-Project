@@ -1,6 +1,7 @@
 const productURL = "https://cms-ca.styve.digital/wp-json/wc/store/products";
 const productsContainer = document.querySelector(".products-grid");
 const cartItems = JSON.parse(localStorage.getItem("cartList"));
+let cartArray = cartItems || [];
 const numberOfItems = document.querySelector(".numberOfItems");
 
 const catMenBtn = document.getElementById("cat-men-btn");
@@ -40,12 +41,11 @@ async function getProducts(url) {
 getProducts(productURL);
 
 function productsInCart() {
-  if (cartItems.length) {
+  if (cartArray.length) {
     numberOfItems.style.display = "inline";
-    numberOfItems.innerHTML = `${cartItems.length}`;
+    numberOfItems.innerHTML = `${cartArray.length}`;
   } else {
     numberOfItems.style.display = "none";
-    numberOfItems.innerHTML = "";
   }
 }
 productsInCart();

@@ -5,7 +5,7 @@ const numberOfItems = document.querySelector(".numberOfItems");
 
 const cartItems = JSON.parse(localStorage.getItem("cartList"));
 
-let cartArray = cartItems;
+let cartArray = cartItems || [];
 
 async function fetchToCart(url) {
   try {
@@ -31,8 +31,7 @@ async function fetchToCart(url) {
     localStorage.setItem("cartList", JSON.stringify(cartArray));
     showCartBtn.style.display = "block";
     addSuccess.style.display = "block";
-    numberOfItems.style.display = "inline";
-    numberOfItems.innerHTML = `${cartArray.length}`;
+    productsInCart();
 
     setInterval(function () {
       addSuccess.style.display = "none";
@@ -53,12 +52,11 @@ addToCart.onclick = function () {
 };
 
 function productsInCart() {
-  if (cartItems.length) {
+  if (cartArray.length) {
     numberOfItems.style.display = "inline";
-    numberOfItems.innerHTML = `${cartItems.length}`;
+    numberOfItems.innerHTML = `${cartArray.length}`;
   } else {
     numberOfItems.style.display = "none";
-    numberOfItems.innerHTML = "";
   }
 }
 productsInCart();
