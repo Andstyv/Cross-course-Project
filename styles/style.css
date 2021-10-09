@@ -301,6 +301,7 @@ nav {
   }
   .main-about {
     flex-direction: column;
+    margin-top: 20px;
   }
   .product-title {
     margin-top: 0;
@@ -321,6 +322,7 @@ nav {
   }
   .contact-main {
     justify-content: center;
+    margin-top: 20px;
   }
   .contact-container {
     width: 90%;
@@ -887,7 +889,7 @@ nav {
   margin-top: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  top: 140px;
+  top: 190px;
 }
 
 .drop-about,
