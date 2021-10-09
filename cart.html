@@ -17,11 +17,9 @@
     <nav>
       <div class="row">
         <div class="dropdown-content">
-          <a href="products.html">Women</a>
-          <a href="products.html">Men</a>
-          <a href="products.html">Kids</a>
-          <a href="products.html" class="link-about">About</a>
-          <a href="products.html" class="link-contact">Contact</a>
+          <a href="products.html" class="link-products">Products</a>
+          <a href="about.html" class="link-about">About</a>
+          <a href="contact.html" class="link-contact">Contact</a>
         </div>
         <ul class="main-nav">
           <li>
@@ -29,12 +27,13 @@
           </li>
           <li class="nav-li-prod">
             <section class="prod-menu">
-              <label for="prod-check" class="nav-prod">Products</label>
+              <a href="products.html">Products</a>
             </section>
           </li>
           <li class="nav-li-search">
             <section class="search-bar-lrg">
               <div class="search">
+                <button type="submit" title="Clear Search" class="search-clear">Clear search</button>
                 <input type="text" class="searchWord" placeholder="SEARCH" />
                 <button type="submit" title="Search" name="Search" class="searchButton">
                   <i class="fas fa-search"></i>
@@ -61,7 +60,7 @@
     </nav>
     <main class="main-cart">
       <section class="cart-view">
-        <a href="products.html" id="go-back">Go back</a>
+        <a href="products.html" id="go-back">Back</a>
         <div class="cart-item"></div>
         <button class="remove-item">Empty Cart</button>
         <div class="cart-pmt">

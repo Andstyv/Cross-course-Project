@@ -499,7 +499,7 @@ nav {
 }
 .gocart-btn {
   display: none;
-  margin-top: 25px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -584,6 +584,7 @@ nav {
     grid-area: main;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   .hamb-menu,

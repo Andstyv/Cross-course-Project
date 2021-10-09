@@ -6,6 +6,7 @@ const showCheckout = document.querySelector(".submit-checkout");
 const checkout = document.querySelector(".checkout-container");
 const removeItems = document.querySelector(".remove-item");
 const backBtn = document.querySelector("#go-back");
+const checkoutForm = document.getElementById("checkout-form");
 
 const cartItems = JSON.parse(localStorage.getItem("cartList"));
 
@@ -27,6 +28,10 @@ removeItems.addEventListener("click", function () {
   totalPrice.innerHTML = `<h3>-</h3>`;
   subtotal.innerHTML = `<h3>-</h3>`;
   shipping.innerHTML = `<h3>-</h3>`;
+  localStorage.setItem("cartList", JSON.stringify([]));
+});
+
+checkoutForm.addEventListener("submit", function () {
   localStorage.setItem("cartList", JSON.stringify([]));
 });
 
