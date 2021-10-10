@@ -1144,6 +1144,7 @@ nav {
 .checkout-submit {
   padding: 5px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #go-back {
